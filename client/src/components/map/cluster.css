@@ -1,0 +1,45 @@
+.cluster-marker {
+	color: #fff;
+	background: #1978c8;
+	border-radius: 50%;
+	padding: 10px;
+	display: flex;
+	justify-content: center;
+	align-items: center;
+}
+
+/* We have to overwrite the styling of the X from the reac-map-gl Popup coomponent */
+.mapboxgl-popup-close-button {
+	font-size: 2rem;
+	color: #fff;
+	opacity: 0.54;
+	z-index: 2;
+	transition: opacity 0.3s linear;
+}
+
+.mapboxgl-popup-close-button:hover {
+	opacity: 0.8;
+}
+
+/* Removing the padding from the reac-map-gl Popup coomponent */
+.mapboxgl-popup-content {
+	padding: 0 !important;
+}
+
+/* Changing the bottom tip to be black from the reac-map-gl Popup coomponent */
+.mapboxgl-popup-tip {
+	border-bottom-color: rgba(0, 0, 0, 0.5) !important;
+	border-top-color: rgba(0, 0, 0, 0.5) !important;
+}
+
+/* Overwriting the swiper class */
+.swiper {
+	z-index: unset !important;
+}
+
+/* Settin the pagination bullets to the right */
+.swiper-pagination {
+	text-align: right !important;
+	left: unset !important;
+	right: 8px;
+}
