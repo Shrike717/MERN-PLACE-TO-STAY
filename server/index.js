@@ -14,8 +14,18 @@ const app = express();
 
 // MW CORS
 app.use((req, res, next) => {
-	// Explanation: The Access-Control-Allow-Origin response header indicates whether the response can be shared with requesting code from the given origin.
-	res.setHeader('Access-Control-Allow-Origin', process.env.CLIENT_URL);
+	const allowedOrigins = [
+		process.env.CLIENT_URL,
+		process.env.CLIENT_URL_PROD,
+	];
+	const origin = req.headers.origin;
+	if (allowedOrigins.includes(origin)) {
+		// Explanation: The Access-Control-Allow-Origin response header indicates whether the response can be shared with requesting code from the given origin.
+		res.setHeader('Access-Control-Allow-Origin', origin);
+	}
+	// // Explanation: The Access-Control-Allow-Origin response header indicates whether the response can be shared with requesting code from the given origin.
+	// res.setHeader('Access-Control-Allow-Origin', process.env.CLIENT_URL);
+
 	// Explanation: The Access-Control-Allow-Methods response header specifies the method or methods allowed when accessing the resource.
 	res.setHeader(
 		'Access-Control-Allow-Methods',
