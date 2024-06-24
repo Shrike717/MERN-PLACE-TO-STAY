@@ -2,7 +2,7 @@
 
 #### Description
 
-Place-To-Stay is a travel application designed to help users find free or inexpensive accommodations worldwide while traveling. Test
+Place-To-Stay is a travel application designed to help users find free or inexpensive accommodations worldwide while traveling.
 
 #### Technologies
 
